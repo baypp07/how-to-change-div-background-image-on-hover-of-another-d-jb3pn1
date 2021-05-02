@@ -1,8 +1,8 @@
-<h1> on hover this will change background </h1>
+<h1> On hover this will change background color </h1>
 <div class="image-client">
   <div *ngFor="let text of texts; let i = index" (mouseenter)="hoveredIndex = i; showHoverColor=true"
     (mouseleave)="hoveredIndex = null; showHoverColor=false" class="image">
-    <p  [ngStyle]="showHoverColor && hoveredIndex ==i && {background:text.color}" > {{text.clients}} </p>
+    <p [ngStyle]="showHoverColor && hoveredIndex ==i && {background:text.color}"> {{text.clients}} </p>
   </div>
 </div>
 
@@ -10,4 +10,3 @@
 
 <div [appHighlight]="'green'">Highlight me!Highlight me!Highlight me!Highlight me!Highlight me!Highlight me!Highlight
   me!Highlight me!Highlight me!Highlight me!</div>
-
